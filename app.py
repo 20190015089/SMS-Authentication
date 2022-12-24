@@ -5,9 +5,6 @@ from eightAM.auth import Authenticator
 secret = Authenticator()
 secretNumebr = secret.generate()
 
-usr_tries = 0
-tries = 3
-
 ip = Utils.getiP()
 city = Utils.getLocation(ip, 'city')
 ccc = Utils.getLocation(ip, 'country_calling_code')
@@ -17,6 +14,9 @@ toNum = f'{ccc}{usrNum}'
 
 verificationMessage = f"Your Authentication Code is {secretNumebr}"
 sendSMS(verificationMessage, toNum, "Send Authintication Code", ip)
+
+usr_tries = 0
+tries = 3
 
 while usr_tries < tries:
     usr_tries += 1
