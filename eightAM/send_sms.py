@@ -5,7 +5,7 @@ from twilio.rest import Client
 def sendSMS(SMSmessage, toNum, purpose, ip):
 
   account_sid = "AC24e65831e5442b1e1b3d3bb183d98c96"
-  auth_token = "7f0c62f98e8cb3ad72793fa41eb1709e"
+  auth_token = "ee95d9e62ffc51de47fc6058b6eaf3ed"
   client = Client(account_sid, auth_token)
 
   message = client.messages.create(
